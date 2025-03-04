@@ -1,7 +1,7 @@
 // src/app/[locale]/page.content.ts
-import { t, type DeclarationContent } from "intlayer";
+import { t, type Dictionary } from "intlayer";
 
-const pageContent: DeclarationContent = {
+const pageContent = {
   key: "page",
   content: {
     getStarted: {
@@ -13,6 +13,6 @@ const pageContent: DeclarationContent = {
       pageLink: "src/app/page.tsx",
     },
   },
-};
+} as Dictionary;
 
 export default pageContent;
