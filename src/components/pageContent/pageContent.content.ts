@@ -1,4 +1,3 @@
-// src/app/[locale]/page.content.ts
 import { t, type Dictionary } from "intlayer";
 
 const pageContent = {

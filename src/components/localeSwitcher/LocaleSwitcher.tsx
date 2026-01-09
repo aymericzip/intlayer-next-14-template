@@ -1,7 +1,6 @@
 "use client";
 
-import { getHTMLTextDir, getLocaleName, getLocalizedUrl } from "intlayer";
-import Link from "next/link";
+import { getHTMLTextDir, getLocaleName } from "intlayer";
 import { useIntlayer, useLocale } from "next-intlayer";
 import { type FC, useRef, useState } from "react";
 import { useLocaleSearch } from "./useLocaleSearch";
@@ -10,11 +9,13 @@ export const LocaleSwitcher: FC = () => {
   const { searchInput, localeSwitcherLabel } = useIntlayer("locale-switcher");
   const inputRef = useRef<HTMLInputElement>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const { locale, pathWithoutLocale, availableLocales, setLocale } =
-    useLocale();
+  const { locale, availableLocales, setLocale } =
+    useLocale({
+      onChange: ()=> window.location.reload(),
+    });
   const { searchResults, handleSearch } = useLocaleSearch(
     availableLocales,
-    locale
+    locale,
   );
 
   return (
@@ -49,8 +50,7 @@ export const LocaleSwitcher: FC = () => {
             {searchResults.map(
               ({ locale: localeItem, currentLocaleName, ownLocaleName }) => (
                 <li key={localeItem} className="p-1">
-                  <Link
-                    href={getLocalizedUrl(pathWithoutLocale, localeItem)}
+                  <button
                     className={`w-full flex flex-row items-center justify-between gap-3 text-left p-2 rounded-xl ${
                       locale === localeItem
                         ? "bg-neutral-800"
@@ -72,7 +72,7 @@ export const LocaleSwitcher: FC = () => {
                     <span className="text-gray-600 text-sm">
                       {localeItem.toUpperCase()}
                     </span>
-                  </Link>
+                  </button>
                 </li>
               )
             )}
