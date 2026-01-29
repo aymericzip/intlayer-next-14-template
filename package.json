@@ -12,9 +12,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "intlayer": "8.0.0-canary.5",
+    "intlayer": "latest",
     "next": "14.2.28",
-    "next-intlayer": "8.0.0-canary.5",
+    "next-intlayer": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
