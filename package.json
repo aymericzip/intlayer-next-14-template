@@ -12,22 +12,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "fuse.js": "7.4.2",
     "intlayer": "9.0.0-canary.12",
     "next": "14.2.28",
     "next-intlayer": "9.0.0-canary.12",
-    "fuse.js": "7.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.17.11",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
+    "@types/node": "^26.1.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.28",
     "intlayer-editor": "9.0.0-canary.12",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2"
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^6.0.3"
   }
 }
