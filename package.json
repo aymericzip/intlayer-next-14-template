@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "fuse.js": "7.4.2",
-    "intlayer": "9.0.0-canary.12",
+    "intlayer": "canary",
     "next": "14.2.28",
-    "next-intlayer": "9.0.0-canary.12",
+    "next-intlayer": "canary",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -25,7 +25,7 @@
     "@types/react-dom": "^18.3.7",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.28",
-    "intlayer-editor": "9.0.0-canary.12",
+    "intlayer-editor": "canary",
     "postcss": "^8.5.16",
     "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3"
