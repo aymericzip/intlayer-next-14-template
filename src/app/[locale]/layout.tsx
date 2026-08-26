@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
-import { IntlayerClientProvider } from "next-intlayer";
+import { IntlayerProvider } from "next-intlayer";
 import { getHTMLTextDir, LocalesValues } from "intlayer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,9 +21,9 @@ const RootLayout = ({
   params: { locale: LocalesValues };
 }>) => (
   <html lang={params.locale} dir={getHTMLTextDir(params.locale)}>
-    <IntlayerClientProvider locale={params.locale}>
+    <IntlayerProvider locale={params.locale}>
       <body className={inter.className}>{children}</body>
-    </IntlayerClientProvider>
+    </IntlayerProvider>
   </html>
 );
 
