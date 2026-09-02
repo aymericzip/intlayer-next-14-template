@@ -1,5 +1,4 @@
 import { LocalParams } from "next-intlayer";
-import { IntlayerServerProvider } from "next-intlayer/server";
 import { PageContent } from "./PageContent";
 import { LocaleSwitcher } from "@/components/localeSwitcher/LocaleSwitcher";
 
